@@ -27,7 +27,7 @@ $(document).ready(function(){
           success: function(xml) {
             $(xml).find('translation').each(function(){
               var id = $(this).attr('id');
-              var text = $(this).find(language).text();
+              var text = $(this).find(hizkuntza).text();
               $("." + id).html(text);
           });
         }
