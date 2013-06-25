@@ -1,6 +1,6 @@
 $(document).ready(function(){
   //Honako kodea smooth scrolling egiten du
-  $('a[href^="#"]').on('click',function (e) {
+  $('a.menu').on('click',function (e) {
     e.preventDefault();
     var target = this.hash,
     $target = $(target);
@@ -10,18 +10,30 @@ $(document).ready(function(){
       window.location.hash = target;
     });
   });
-  
+   
   $(function() {
+   
     var hizkuntza = $.cookie('hizkuntza');
 
     if (hizkuntza == null){
       hizkuntza = navigator.language;
       $.cookie('hizkuntza', hizkuntza, {expires: 365, path: '/'});
     }
-    
+    if (hizkuntza != 'eu') {
+      hizkuntza = 'es';
+    }
     $('li.'+hizkuntza).addClass('active');
     
     if (hizkuntza == 'eu') {
+      translate(hizkuntza);
+    }
+    $('a.lang-toggle').on('click', function(e) {
+      e.preventDefault();
+      var lang = this.hash.substring(1);
+      translate(lang);
+    }); 
+    
+    function translate(hizkuntza) {
       $.ajax({
           url: 'translations.xml',
           success: function(xml) {
