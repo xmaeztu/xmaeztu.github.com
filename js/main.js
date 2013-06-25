@@ -15,15 +15,15 @@ $(document).ready(function(){
     var language = navigator.language;
     if (language == 'eu') {
       $.ajax({
-          url: 'translations.xml',
-          success: function(xml) {
-              $(xml).find('translation').each(function(){
-                  var id = $(this).attr('id');
-                  var text = $(this).find(language).text();
-                  $("." + id).html(text);
-              });
-          }
+        url: 'translations.xml',
+        success: function(xml) {
+          $(xml).find('translation').each(function(){
+            var id = $(this).attr('id');
+            var text = $(this).find(language).text();
+            $("." + id).html(text);
+          });
+        }
       });
     }
-});
+  });
 });
