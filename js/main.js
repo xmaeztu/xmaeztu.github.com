@@ -12,13 +12,14 @@ $(document).ready(function(){
   });
   
   $(function() {
-    var cookie = $.cookie('hizkuntza');
+    var hizkuntza = $.cookie('hizkuntza');
 
-    if (cookie == null){
-      var hizkuntza = navigator.language;
-      cookie = hizkuntza;
-      $.cookie('hizkuntza', cookie, {expires: 365, path: '/'});
+    if (hizkuntza == null){
+      hizkuntza = navigator.language;
+      $.cookie('hizkuntza', hizkuntza, {expires: 365, path: '/'});
     }
+    
+    $('li.'+hizkuntza).addClass('active');
     
     if (hizkuntza == 'eu') {
       $.ajax({
