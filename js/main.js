@@ -12,7 +12,7 @@ $(document).ready(function(){
   });
   
   $(function() {
-    var language = 'eu';
+    var language = navigator.language;
     $.ajax({
         url: 'translations.xml',
         success: function(xml) {
