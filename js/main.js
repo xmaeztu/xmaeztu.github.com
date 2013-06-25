@@ -13,6 +13,9 @@ $(document).ready(function(){
   
   $(function() {
     var language = navigator.language;
+    if (language != 'eu') {
+      language = 'cas';
+    }
     $.ajax({
         url: 'translations.xml',
         success: function(xml) {
