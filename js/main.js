@@ -12,18 +12,25 @@ $(document).ready(function(){
   });
   
   $(function() {
-    var language = navigator.language;
-    if (language == 'eu') {
+    var cookie = $.cookie('hizkuntza');
+
+    if (cookie == null){
+      var hizkuntza = navigator.language;
+      cookie = hizkuntza;
+      $.cookie('hizkuntza', cookie, {expires: 365, path: '/'});
+    }
+    
+    if (hizkuntza == 'eu') {
       $.ajax({
           url: 'translations.xml',
           success: function(xml) {
-              $(xml).find('translation').each(function(){
-                  var id = $(this).attr('id');
-                  var text = $(this).find(language).text();
-                  $("." + id).html(text);
-              });
-          }
+            $(xml).find('translation').each(function(){
+              var id = $(this).attr('id');
+              var text = $(this).find(language).text();
+              $("." + id).html(text);
+          });
+        }
       });
     }
-});
+  });
 });
