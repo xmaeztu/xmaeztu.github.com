@@ -31,7 +31,7 @@ $(document).ready(function(){
       e.preventDefault();
       var lang = this.hash.substring(1);
       translate(lang);
-      $('li.'+hizkuntza).addClass('active');
+      $('li.'+lang).addClass('active');
       $.cookie('hizkuntza', lang, {expires: 365, path: '/'});
     }); 
     
