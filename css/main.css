@@ -3,9 +3,18 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  /*margin-top: 20px;*/
+  margin-bottom: -90px;
+}
 
 .hero-unit {
-  padding: 30px 60px;
+  padding: 0px 60px 30px 60px;
   background-color: #f5f5f5;
 }
 
