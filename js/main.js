@@ -31,6 +31,7 @@ $(document).ready(function(){
       e.preventDefault();
       var lang = this.hash.substring(1);
       translate(lang);
+      $('div.language-toggle li[class!="'+lang+'"]').removeClass('active');
       $('li.'+lang).addClass('active');
       $.cookie('hizkuntza', lang, {expires: 365, path: '/'});
     }); 
