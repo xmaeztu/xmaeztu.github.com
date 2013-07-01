@@ -23,6 +23,11 @@ div.sonidero {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  padding: 10px;
+}
+
+div.sonidero span6{
+    padding: 10px;
 }
 
 @media (max-width: 767px) {
