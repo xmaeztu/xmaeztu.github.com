@@ -14,7 +14,7 @@
 }
 
 .hero-unit {
-  padding: 0px 60px 60px 60px;
+  padding: 0px 60px 100px 60px;
   background-color: #ffce00;
 }
 
@@ -27,11 +27,5 @@ div.sonidero {
 }
 
 div.sonidero span6{
-    padding: 10px;
-}
-
-@media (max-width: 767px) {
-  .navbar-inner {
-    border-radius: 0 0 4px 4px;
-  }
+  padding: 10px;
 }
