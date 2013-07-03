@@ -47,8 +47,14 @@ $(document).ready(function(){
           });
         }
       });
-      $('#ogitartekoak p[class!="'+lang+'"]').hide();
-      $('#ogitartekoak p.'+lang).show();
+      if (hizkuntza == 'eu') {
+        var beste_hizkuntza = 'es';
+      }
+      else {
+        var beste_hizkuntza = 'eu';
+      }
+      $('#ogitartekoak p.'+beste_hizkuntza).hide();
+      $('#ogitartekoak p.'+hizkuntza).show();
     }
   });
 });
