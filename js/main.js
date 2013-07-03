@@ -47,6 +47,8 @@ $(document).ready(function(){
           });
         }
       });
+      $('#ogitartekoak p[class!="'+lang+'"]').hide();
+      $('#ogitartekoak p.'+lang).show();
     }
   });
 });
