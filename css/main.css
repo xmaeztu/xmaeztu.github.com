@@ -3,6 +3,10 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+h2 {
+    text-transform: uppercase;
+}
+
 .navbar-wrapper {
   position: fixed;
   top: 0;
@@ -27,5 +31,13 @@ div.sonidero-main {
 }
 
 div.sonidero span6{
+  padding: 10px;
+}
+
+div.nongaude{
+  background-color: #ffce00;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   padding: 10px;
 }

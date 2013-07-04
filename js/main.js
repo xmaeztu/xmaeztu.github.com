@@ -9,6 +9,7 @@ $(document).ready(function(){
     }, 1200, 'swing', function () {
       window.location.hash = target;
     });
+    ga('send', 'event', 'button', 'click', 'menu', target);
   });
    
   $(function() {
